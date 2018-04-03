@@ -11,7 +11,7 @@ import java.util.UUID;
 /**
  * Created by guonl
  * Date 2018/4/2 下午2:25
- * Description:
+ * Description:基于redis的分布式锁
  */
 public class DistributedLock {
     private final JedisPool jedisPool;

@@ -15,7 +15,8 @@ import java.util.concurrent.locks.Lock;
 /**
  * Created by guonl
  * Date 2018/4/2 下午2:26
- * Description: 参考文章：https://blog.csdn.net/sunfeizhi/article/details/51926396
+ * Description: 基于zookeeper的分布式锁
+ * 参考文章：https://blog.csdn.net/sunfeizhi/article/details/51926396
  */
 public class DistributedLock implements Lock, Watcher {
     private ZooKeeper zk = null;
