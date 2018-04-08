@@ -1,4 +1,10 @@
 package com.guonl.annotation;
+
+/**
+ * Created by guonl
+ * Date 2018/4/8 下午2:27
+ * Description:
+ */
 @MyAnnotation(name="person",say="hello",age=12)
 public class ClassPerson {
 	@MyAnnotation(name="person")
