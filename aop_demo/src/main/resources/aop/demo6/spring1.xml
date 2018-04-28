@@ -7,12 +7,14 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- 扫描指定包（将 @Component 注解的类自动定义为 Spring Bean） -->
     <context:component-scan base-package="aop.demo6"/>
 
+    <!-- 配置一个代理 -->
     <bean id="greetingProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
-        <property name="interfaces" value="aop.Greeting"/>
-        <property name="target" ref="greetingImpl"/>
-        <property name="interceptorNames">
+        <property name="interfaces" value="aop.Greeting"/> <!-- 需要代理的接口 -->
+        <property name="target" ref="greetingImpl"/> <!-- 接口实现类 -->
+        <property name="interceptorNames"> <!-- 拦截器名称（也就是增强类名称，Spring Bean 的 id） -->
             <list>
                 <value>greetingBeforeAdvice</value>
                 <value>greetingAfterAdvice</value>
