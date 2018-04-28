@@ -1,6 +1,6 @@
 server:
   port: 8080
-  session-timeout: 60
+  session-timeout: 300
 spring:
     redis:  
        database: 0  
